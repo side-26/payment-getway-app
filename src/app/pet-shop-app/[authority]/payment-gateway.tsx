@@ -46,7 +46,7 @@ export default function PaymentGateway({ payment }: { payment: PaymentDetails })
   }
   function updateCardNumber(value: string) { setCardNumber(value.replace(/\D/g, "").slice(0, 16).replace(/(.{4})/g, "$1 ").trim()); }
 
-  return <main className="grid min-h-screen place-items-center bg-[linear-gradient(135deg,#dceafd_0%,#f5f8fc_43%,#e7f0fb_100%)] p-5 font-[Tahoma,Arial,sans-serif] text-[#18355e]" dir="rtl">
+  return <main className="grid min-h-screen place-items-center bg-[linear-gradient(135deg,#dceafd_0%,#f5f8fc_43%,#e7f0fb_100%)] p-5 text-[#18355e]" dir="rtl">
     <section className="grid w-full max-w-[1060px] overflow-hidden rounded-[18px] border border-[#1f4d8e]/12 bg-white shadow-[0_25px_70px_rgba(23,61,111,.18)] md:grid-cols-[36%_64%]" aria-label="درگاه پرداخت اینترنتی">
       <aside className="border-l border-[#dce5f0] bg-[#fbfcfe] max-md:border-b max-md:border-l-0">
         <div className="flex h-[51px] items-center justify-between bg-linear-to-r from-[#1c4784] to-[#24599f] px-[25px] text-sm font-bold text-white"><span>زمان باقی‌مانده</span><span className="font-mono text-xl tracking-[3px]" dir="ltr">{minutes}:{secondsPart}</span></div>
